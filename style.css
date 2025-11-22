@@ -1,0 +1,172 @@
+/* sgal/public/css/style.css */
+
+/* --- Reseteo Básico y Fuente --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    height: 100%;
+}
+
+/* --- Barra Superior (Header) --- */
+.top-bar {
+    background-color: #1a237e; /* Azul oscuro */
+    color: white;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between; /* Título a la izq, user a la der */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.top-bar .user-info {
+    font-size: 0.9rem;
+}
+
+.top-bar .user-info span {
+    margin-right: 15px;
+}
+
+.top-bar .logout-button {
+    color: white;
+    background-color: #c62828; /* Rojo */
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.top-bar .logout-button:hover {
+    background-color: #e53935;
+}
+
+
+/* --- Contenedor Principal (Sidebar + Contenido) --- */
+.main-container {
+    display: flex; /* ¡La magia del layout! */
+    min-height: calc(100vh - 65px); /* Alto total menos el top-bar */
+}
+
+/* --- Sidebar (Menú Lateral) --- */
+.sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li {
+    margin-bottom: 5px;
+}
+
+.sidebar nav li strong {
+    display: block;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #2c3e50;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.sidebar nav a:hover {
+    background-color: #ecf0f1; /* Gris claro */
+}
+
+
+/* --- Área de Contenido Principal --- */
+.content {
+    flex-grow: 1; /* El contenido ocupa todo el espacio restante */
+    padding: 25px;
+    background-color: #f4f7f6;
+}
+
+.content h2 {
+    border-bottom: 2px solid #1a237e;
+    padding-bottom: 10px;
+    color: #1a237e;
+}
+
+/* --- Pie de Página --- */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: #aaa;
+    font-size: 0.85rem;
+    border-top: 1px solid #555;
+    /* Este footer es visualmente separado del .main-container */
+}
+
+/* --- Estilos para Formularios (Los usaremos mucho) --- */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #1a237e; /* Azul */
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #283593;
+}

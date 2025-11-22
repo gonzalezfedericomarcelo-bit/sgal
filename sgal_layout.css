@@ -1,0 +1,136 @@
+/* sgal/public/css/sgal_layout.css */
+body {
+    background-color: #f8f9fa;
+}
+
+/* --- Layout Principal --- */
+.main-container {
+    min-height: calc(100vh - 56px); /* 100% de la altura menos el navbar */
+}
+
+/* --- Navbar (El de arriba) --- */
+/* Le damos nuestro color azul oscuro al navbar de Bootstrap */
+.navbar.bg-dark {
+    background-color: #1a237e !important;
+}
+
+/* --- Sidebar (El del costado) --- */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0; /* No se achica */
+    background-color: #ffffff;
+    border-right: 1px solid #dee2e6;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    position: sticky;
+    top: 56px;
+}
+.sidebar-header {
+    display: block;
+    color: #6c757d;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.sidebar .nav-link {
+    font-size: 0.95rem;
+    color: #343a40;
+    padding: 0.65rem 1rem;
+    border-radius: 0.25rem;
+    display: flex; /* Para alinear ícono y texto */
+    align-items: center;
+}
+.sidebar .nav-link:hover {
+    background-color: #e9ecef;
+}
+/* Al hacer clic (activo) */
+.sidebar .nav-pills .nav-link.active, 
+.sidebar .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #1a237e; /* Azul oscuro */
+}
+.sidebar .nav-link i {
+    font-size: 1.1rem; /* Tamaño del ícono */
+}
+
+/* --- Área de Contenido Principal --- */
+.content {
+    flex-grow: 1;
+    padding: 1.5rem; /* Un poco menos de padding */
+    height: 100%;
+
+    /* --- ¡¡¡ESTA ES LA LÍNEA QUE ARREGLA EL SCROLL HORIZONTAL!!! --- */
+    /* Previene que el contenedor se desborde por culpa de las tablas */
+    min-width: 0; 
+}
+
+/* Hacemos el padding más chico en celulares */
+@media (max-width: 768px) {
+    .content {
+        padding: 0.75rem;
+    }
+}
+
+
+/* --- Tarjetas (Widgets) --- */
+.card {
+    border: none; /* Sacamos el borde feo de Bootstrap */
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+}
+.card-header {
+    background-color: #f8f9fa; /* Un gris sutil */
+    border-bottom: 1px solid #dee2e6;
+}
+.card-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1a237e; /* Títulos de tarjeta en azul */
+}
+
+/* --- Botones (Global) --- */
+.btn-primary {
+    background-color: #1a237e;
+    border-color: #1a237e;
+}
+.btn-primary:hover {
+    background-color: #283593; /* Un azul un poco más claro */
+    border-color: #283593;
+}
+.btn-outline-primary {
+    border-color: #1a237e;
+    color: #1a237e;
+}
+.btn-outline-primary:hover {
+    background-color: #1a237e;
+    color: white;
+}
+.btn-success { background-color: #198754; border-color: #198754; }
+.btn-danger { background-color: #dc3545; border-color: #dc3545; }
+.btn-warning { background-color: #ffc107; border-color: #ffc107; }
+.btn-info { background-color: #0dcaf0; border-color: #0dcaf0; }
+
+/* --- Tarjetas de KPI (Para el Dashboard) --- */
+.kpi-card {
+    border-radius: 0.5rem;
+    color: white;
+    border: none;
+}
+.kpi-card .card-body {
+    padding: 1.5rem;
+}
+.kpi-card .kpi-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.kpi-card .kpi-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.kpi-card .kpi-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+}
